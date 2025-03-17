@@ -101,27 +101,28 @@
         border-radius: 4px;
       }
 
-      .date-publish {
+      .publish-date {
         color: var(--card-foreground);
         margin-bottom: 12px;
         font-size: 14px;
       }
 
-      .title-article {
+      .article-title {
         color: var(--card-foreground);
         margin-bottom: 12px;
         font-size: 24px;
         width: fit-content;
       }
 
-      .title-article:hover {
+      .article-title:hover {
         color: var(--card-accent-foreground);
         cursor: pointer;
       }
 
-      .subtitle-article {
+      .article-content {
         color: var(--card-muted);
         font-size: 16px;
+        margin-bottom: 24px;
       }
 
       .author {
@@ -129,7 +130,6 @@
         align-items: center;
         column-gap: 12px;
         font-size: 14px;
-        margin-top: 24px;
       }
 
       img.author-image {
@@ -139,8 +139,8 @@
     </style>
   </head>
   <body>
-    <main class="card">
-      <section>
+    <main>
+      <article class="card">
         <!-- Article image -->
         <img
           class="article-image"
@@ -148,29 +148,31 @@
           alt="Article image"
         />
 
-        <!-- Label category -->
-        <div style="margin-bottom: 12px">
-          <span
-            aria-describedby="sr-category"
-            class="label-category font-extra-bold"
-            >Learning</span
-          >
-          <p id="sr-category" style="display: none">
-            Article category: learning
-          </p>
-        </div>
+        <header>
+          <!-- Label category -->
+          <div style="margin-bottom: 12px">
+            <span
+              aria-describedby="sr-category"
+              class="label-category font-extra-bold"
+              >Learning</span
+            >
+            <p id="sr-category" style="display: none">
+              Article category: learning
+            </p>
+          </div>
 
-        <!-- Publish date -->
-        <p class="date-publish font-medium">Published 21 Dec 2023</p>
+          <!-- Publish date -->
+          <p class="publish-date font-medium">Published 21 Dec 2023</p>
 
-        <!-- Content article -->
-        <article>
-          <h2 class="title-article font-extra-bold">HTML & CSS foundations</h2>
-          <p class="subtitle-article font-medium">
-            These languages are the backbone of every website, defining
-            structure, content, and presentasion.
-          </p>
-        </article>
+          <!-- Article title -->
+          <h2 class="article-title font-extra-bold">HTML & CSS foundations</h2>
+        </header>
+
+        <!-- Article content -->
+        <p class="article-content font-medium">
+          These languages are the backbone of every website, defining structure,
+          content, and presentasion.
+        </p>
 
         <!-- Author -->
         <div class="author">
@@ -181,7 +183,7 @@
           />
           <p class="font-extra-bold">Greg Hooper</p>
         </div>
-      </section>
+      </article>
     </main>
     <footer class="attribution">
       Challenge by
