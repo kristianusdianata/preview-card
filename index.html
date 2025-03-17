@@ -129,6 +129,7 @@
         align-items: center;
         column-gap: 12px;
         font-size: 14px;
+        margin-top: 24px;
       }
 
       img.author-image {
@@ -138,8 +139,8 @@
     </style>
   </head>
   <body>
-    <main>
-      <article class="card">
+    <main class="card">
+      <section>
         <!-- Article image -->
         <img
           class="article-image"
@@ -147,32 +148,31 @@
           alt="Article image"
         />
 
-        <section style="margin-bottom: 24px">
-          <header>
-            <!-- Label category -->
-            <div style="margin-bottom: 12px">
-              <span
-                aria-describedby="sr-category"
-                class="label-category font-extra-bold"
-                >Learning</span
-              >
-              <p id="sr-category" style="display: none">
-                Article category: learning
-              </p>
-            </div>
+        <!-- Label category -->
+        <div style="margin-bottom: 12px">
+          <span
+            aria-describedby="sr-category"
+            class="label-category font-extra-bold"
+            >Learning</span
+          >
+          <p id="sr-category" style="display: none">
+            Article category: learning
+          </p>
+        </div>
 
-            <p class="date-publish font-medium">Published 21 Dec 2023</p>
-            <h2 class="title-article font-extra-bold">
-              HTML & CSS foundations
-            </h2>
-          </header>
+        <!-- Publish date -->
+        <p class="date-publish font-medium">Published 21 Dec 2023</p>
 
+        <!-- Content article -->
+        <article>
+          <h2 class="title-article font-extra-bold">HTML & CSS foundations</h2>
           <p class="subtitle-article font-medium">
             These languages are the backbone of every website, defining
             structure, content, and presentasion.
           </p>
-        </section>
+        </article>
 
+        <!-- Author -->
         <div class="author">
           <img
             class="author-image"
@@ -181,7 +181,7 @@
           />
           <p class="font-extra-bold">Greg Hooper</p>
         </div>
-      </article>
+      </section>
     </main>
     <footer class="attribution">
       Challenge by
