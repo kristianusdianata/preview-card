@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Figtree Extra Bold";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree Medium";
+  src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+}
+
+:root {
+  --background: hsl(47, 88%, 63%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 7%);
+  --card-muted: hsl(0, 0%, 42%);
+  --card-primary: hsl(47, 88%, 63%);
+  --card-primary-foreground: hsl(0, 0%, 7%);
+  --card-text-accent: hsl(47, 88%, 63%);
+}
+
+.font-extra-bold {
+  font-family: "Figtree Extra Bold";
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 800;
+}
+
+.font-medium {
+  font-family: "Figtree Medium";
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 500;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-inline-size: 1440px;
+  min-block-size: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--card);
+  max-inline-size: 384px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 1rem 1rem;
+}
+
+.card img.img-illustration {
+  max-inline-size: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.card .label-category {
+  background-color: var(--card-primary);
+  color: var(--card-primary-foreground);
+  font-size: 0.875rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.card .publish-date {
+  color: var(--card-foreground);
+  margin-block: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.card .title {
+  color: var(--card-foreground);
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.card .sub-title {
+  color: var(--card-muted);
+  font-size: 1rem;
+  margin-bottom: 0.875rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  font-size: 0.875rem;
+}
+
+img.author-image {
+  inline-size: 32px;
+  block-size: 32px;
+}
+
+@media (hover: hover) {
+  .card .title:hover {
+    color: var(--card-text-accent);
+    cursor: pointer;
+  }
+}
